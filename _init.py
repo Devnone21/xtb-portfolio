@@ -91,7 +91,7 @@ class Pane:
         # 'show active' if not idx else ''
         self.code = f"""
     <div id="{name}" class="tab-pane fade ">
-      <p class="text-end text-secondary fst-italic">{dt.now()}</p>
+      <p class="text-end text-secondary fst-italic">Last update: {dt.now().strftime('%a %d-%b, %I:%M %p')}</p>
       <h6>ID: {account}</h6>
       <p class="text-secondary fst-italic">xtb-{name}</p>
       {table}
