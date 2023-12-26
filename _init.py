@@ -71,7 +71,7 @@ class Xhtml:
       {''.join(self.tabs)}
     </ul>
   </header>
-  <div class="container tab-content pt-5" id="pills-tabContent">
+  <div class="container tab-content pt-3" id="pills-tabContent">
   {''.join(self.panes)}
   </div>
 </body>
@@ -91,6 +91,7 @@ class Pane:
         # 'show active' if not idx else ''
         self.code = f"""
     <div id="{name}" class="tab-pane fade ">
+      <p class="text-end text-secondary fst-italic">{dt.now()}</p>
       <h6>ID: {account}</h6>
       <p class="text-secondary fst-italic">xtb-{name}</p>
       {table}
